@@ -1,5 +1,6 @@
 'use client';
 
+import Modal from '@/components/Modal';
 import React, { useState, useEffect } from 'react';
 
 const ModalProvider = () => {
@@ -14,7 +15,7 @@ const ModalProvider = () => {
 
   return (
     <div>
-      Enter
+      <Modal />
     </div>
   );
 }
