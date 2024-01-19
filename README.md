@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Spotify Build Project
 
-## Getting Started
+This project is a Spotify clone built using Next.js 14.0.3, React, Stripe for payment processing, Supabase for authentication and database, PostgreSQL as the database, and Tailwind CSS for styling.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Overview](#overview)
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project aims to replicate the core functionality of the Spotify application, providing users with a familiar interface for exploring and listening to music. It utilizes modern web development technologies to deliver a seamless user experience.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Features
 
-## Learn More
+- User authentication with Supabase
+- Real-time updates using Supabase for playlists and song playback
+- Integration with Stripe for premium subscription payments
+- PostgreSQL database for storing user data and playlists
+- Responsive UI design with Tailwind CSS
+- Next.js for server-side rendering and improved performance
 
-To learn more about Next.js, take a look at the following resources:
+## Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Before you begin, ensure you have the following installed on your local machine:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Node.js: [Download and install Node.js](https://nodejs.org/)
 
-## Deploy on Vercel
+## Installation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Clone the repository:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```bash
+   git clone https://github.com/Arnaudband/spotify.git
+   cd spotify
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Set up environment variables:
+
+   Create a `.env.local` file in the root of the project and add the following variables:
+
+   ```env
+   NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anonymous-key
+   STRIPE_PUBLIC_KEY=your-stripe-public-key
+   ```
+
+   Replace `your-supabase-url`, `your-supabase-anonymous-key`, and `your-stripe-public-key` with your actual Supabase URL, Supabase anonymous key, and Stripe public key.
+
+4. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+   Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+
+## Usage
+
+- Create a new account or log in using your existing account.
+- Explore music, create playlists, and enjoy your favorite tracks.
+- Upgrade to a premium account for additional features.
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
