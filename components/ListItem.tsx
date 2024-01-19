@@ -28,7 +28,7 @@ const ListeItem: React.FC<ListItemProps> = ({
     onClick={handleClick}
       className="relative group flex items-center rounded-md overflow-hidden gap-x-4 bg-neutral-100/10 hover:bg-neutral-100/20 transition pr-4">
       <div className="relative min-h-[64px] min-w-[64px]">
-        <Image src={image} alt='Image' className='object-cover' layout='fill' />
+        <Image src={image} alt='Image' width="100" height="100" className='object-cover' loading='eager' />
       </div>
       <div>
         <h2 className="text-white text-lg font-semibold">
