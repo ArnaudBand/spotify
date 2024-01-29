@@ -35,7 +35,7 @@ const Sidebar = ({ children }: SidebarProps) => {
     <div className="flex h-full">
       <div className="hidden md:flex flex-col gap-y-2 bg-black h-full p-2 w-[300px]">
         <Box>
-          <div className="flex flex-col gap-y-4 px-5 py-4">
+          <div className="flex flex-col gap-y-4 px-5 py-4 rounded drop-shadow bg-zinc-800">
             {routes.map((route) => (
               <SidebarItem
                 key={route.name}
