@@ -1,6 +1,7 @@
 import Stripe from 'stripe';
 
 export interface Song {
+  [x: string]: ReactNode;
   id: string;
   user_id: string;
   author: string;
