@@ -1,21 +1,18 @@
 "use client";
 
 import Image from "next/image";
-
+import React from "react";
 import { useLoadImage } from "@/hooks/useLoadImage";
 import { Song } from "@/types";
-
 import PlayButton from "./PlayButton";
+
 
 interface SongItemProps {
   data: Song;
   onClick: (id: string) => void;
 }
 
-const SongItem: React.FC<SongItemProps> = ({
-                                             data,
-                                             onClick
-                                           }) => {
+const SongItem: React.FC<SongItemProps> = ({ data, onClick }) => {
   const imagePath = useLoadImage(data);
 
   return (
