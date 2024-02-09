@@ -1,4 +1,6 @@
+import {ReactNode} from "react";
 import Stripe from 'stripe';
+
 
 export interface Song {
   [x: string]: ReactNode;
