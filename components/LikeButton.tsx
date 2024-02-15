@@ -1,17 +1,14 @@
 'use client';
 
+import {useEffect, useState} from "react";
 import {useRouter} from "next/navigation";
 import {useSessionContext} from "@supabase/auth-helpers-react";
 import toast from "react-hot-toast";
-import {useEffect, useState} from "react";
 import {AiFillHeart, AiOutlineHeart} from "react-icons/ai";
 import {IconBaseProps} from "react-icons";
 
 import useAuthModal from "@/hooks/useAuthModal";
 import {useUser} from "@/hooks/useUser";
-
-
-
 
 interface LikeButtonProps {
   songId: string
@@ -41,6 +38,7 @@ const LikeButton: React.FC<LikeButtonProps> = ({songId}) => {
         setIsLiked(true);
       }
     }
+    fetchData();
   }, [songId, supabaseClient, user?.id]);
 
   let Icon: (props: IconBaseProps) => JSX.Element;
